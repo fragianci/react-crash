@@ -1,21 +1,35 @@
 // import NavLink from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const linkClasses = ({ isActive }: { isActive: boolean }) =>
+    isActive
+      ? "text-white bg-black rounded-md p-3 hover:bg-gray-900"
+      : "text-white rounded-md p-3 hover:bg-gray-900";
+
   return (
     <nav className="bg-indigo-700 border-b border-indigo-500">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-            <a href="#">ciao</a>
             {/* <NavLink className="flex flex-shrink-0 items-center mr-4" to="/">
               <img className="h-10 w-auto" src={logo} alt="React Jobs" />
               <span className="hidden md:block text-white text-2xl font-bold ml-2">
                 React Jobs
               </span>
             </NavLink> */}
-            <div className="md:ml-auto">
-              {/* <div className="flex space-x-2">
-                <NavLink to="/" className={linkClass}>
+            <div className="">
+              <div className="flex space-x-2">
+                <NavLink to="/" className={linkClasses}>
+                  Home
+                </NavLink>
+                <NavLink to="/jobs-page" className={linkClasses}>
+                  Jobs
+                </NavLink>
+                <NavLink to="/add-jobs" className={linkClasses}>
+                  Add job
+                </NavLink>
+                {/* <NavLink to="/" className={linkClass}>
                   Home
                 </NavLink>
                 <NavLink to="/jobs" className={linkClass}>
@@ -23,8 +37,8 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink to="/add-job" className={linkClass}>
                   Add Job
-                </NavLink>
-              </div> */}
+                </NavLink> */}
+              </div>
             </div>
           </div>
         </div>

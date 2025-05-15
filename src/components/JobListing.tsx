@@ -39,20 +39,11 @@ function JobListing({ job }: { job: Job }) {
         </Link> */}
         <Link
           className="bg-blue-400 text-white p-2 rounded-md hover:bg-indigo-700"
-          to="/"
+          to={`/jobs-page/${job.id}`}
         >
           Read more
         </Link>
       </div>
-      {/* {loading ? (
-        <Spinner loading={loading} />
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {jobs.map((job) => (
-            <JobListing key={job.id} job={job} />
-          ))}
-        </div>
-      )} */}
     </div>
   );
 }

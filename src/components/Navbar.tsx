@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-indigo-700 border-b border-indigo-500">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="ml-4 ">
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             {/* <NavLink className="flex flex-shrink-0 items-center mr-4" to="/">
